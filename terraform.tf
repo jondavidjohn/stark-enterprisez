@@ -1,13 +1,4 @@
 terraform {
-  cloud {
-    hostname = "app.staging.terraform.io"
-    organization = "<INSERT_ORG_NAME_HERE>"
-
-    workspaces {
-      name = "hq"
-    }
-  }
-
   required_providers {
     tfe = "~> 0.44.1"
   }
