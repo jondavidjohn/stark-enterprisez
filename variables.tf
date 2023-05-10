@@ -1,7 +1,7 @@
-variable "github_token" {
+variable "oauth_token" {
   type = string
   sensitive = true
-  description = "A Github Personal Access token"
+  description = "The OAuth token for a VCS connection"
 }
 
 variable "github_username" {

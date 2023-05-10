@@ -10,18 +10,11 @@ module "projects" {
   organization_name = var.organization_name
 }
 
-module "vcs" {
-  source = "./vcs"
-
-  oauth_token = var.github_token
-  organization_name = var.organization_name
-}
-
 module "registry" {
   source = "./registry"
 
   github_username = var.github_username
-  oauth_token_id = module.vcs.oauth_token_id
+  oauth_token_id = var.oauth_token
   organization_name = var.organization_name
 }
 
@@ -29,7 +22,7 @@ module "workspaces" {
   source = "./workspaces"
 
   github_username = var.github_username
-  oauth_token_id = module.vcs.oauth_token_id
+  oauth_token_id = var.oauth_token
   token = var.token
   organization_name = var.organization_name
   hostname = var.hostname
