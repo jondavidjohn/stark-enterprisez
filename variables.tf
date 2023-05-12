@@ -1,9 +1,3 @@
-variable "oauth_token" {
-  type = string
-  sensitive = true
-  description = "The OAuth token for a VCS connection"
-}
-
 variable "github_username" {
   type = string
   description = "The Github username that owns the repositories that will be used"
