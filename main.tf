@@ -13,7 +13,6 @@ module "projects" {
 module "vcs" {
   source = "./vcs"
 
-  oauth_token = var.github_token
   organization_name = var.organization_name
 }
 

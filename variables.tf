@@ -1,9 +1,3 @@
-variable "github_token" {
-  type = string
-  sensitive = true
-  description = "A Github Personal Access token"
-}
-
 variable "github_username" {
   type = string
   description = "The Github username that owns the repositories that will be used"
